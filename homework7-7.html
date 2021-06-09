@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <style>
+            body {
+            margin: 0px;
+            padding: 0px;
+            }
+        </style>
+    </head>
+    <title>homework 7-7</title>
+    <body>
+        <canvas id="myCanvas" width="500" height="500" style="border:1px solid #000000;"></canvas>
+        <script>
+
+            var canvas = document.getElementById('myCanvas');
+            var context = canvas.getContext('2d');
+            var lasttime;    
+
+            var point = {
+                x: 250,
+                y: 250,
+                radius: 25,
+                angle: 0,
+                distance: 150,
+                speed: 300
+            };
+/*
+            var runAnimation = {
+                value: true
+            };
+
+            window.requestAnimFrame = (function(callback) {
+                return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
+                function(callback) {
+                    window.setTimeout(callback, 1000 / 60);
+                };
+            })();
+*/
+            
+
+            function drawLine(point, locate, canvas, context ) {
+                context.beginPath();
+                context.moveTo(start.x,start.y);
+                context.lineTo(point.x,point.y);
+                context.lineWidth=5;
+                context.strokeStyle = 'red';
+                context.stroke();
+            }
+
+            function drawFrame(point, canvas, context) {
+                var locate1 = {x:250, y:250};
+                var locate2 = {x:0, y:0};
+                var locate3 = {x:500, y:0};
+                var locate4 = {x:0, y:500};
+                var locate5 = {x:500, y:500};
+
+                drawLine(point, locate1, context, 'red');
+                drawLine(point, locate2, context, 'blue');
+                drawLine(point, locate3, context, 'blue');
+                drawLine(point, locate4, context, 'blue');
+                drawLine(point, locate5, context, 'blue');
+            }
+
+            function drawCircle(point,context) {
+                conetxt.beginPath();
+                context.arc(point.x, point.y, point.radius, 0, 2*Math.PI, false);
+                context.fillStyle = 'green';
+                conetxt.fill();
+                conetxt.lineWidth = 5;
+                context.strokeStyle = 'black';
+                context.stroke();
+            }
+/*
+            function animate(myCircle, runAnimation, canvas, context) {
+                if(runAnimation.value) {
+
+                    var time=(new Date()).getTime();
+                    var timeDiff = time-lasttime;
+                    var moveAngle=myCircle.speed 
+
+            
+                    context.clearRect(0, 0, canvas.width, canvas.height);
+                    drawRect(myCircle, context);
+
+                    requestAnimFrame(function() {
+                        animate(myCircle, runAnimation, canvas, context);
+                    });
+                }
+            }
+
+            document.getElementById('myCanvas').addEventListener('click', function() {
+                runAnimation.value = !runAnimation.value;
+                if(runAnimation.value) {
+                    animate(myCircle, runAnimation, canvas, context);
+                }
+            });
+*/
+            drawCircle(point, context);
+        </script>
+    </body>
+</html>    

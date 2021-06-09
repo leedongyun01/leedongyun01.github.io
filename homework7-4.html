@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <title>homework 7-4</title>
+  <body>
+    <canvas id="myCanvas" width="400" height="400" style="border:1px solid #000000;"></canvas>
+    <script>
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+
+      var x = canvas.width / 2;
+      var y = canvas.height / 2;
+      var radius = 75;
+      var startAngle = 0 * Math.PI;
+      var endAngle = 2 * Math.PI;
+      var counterClockwise = false;
+
+      var i;
+      var j=13;
+      for (i=0; i<201; i=i+(200/15)){
+          if (i<100){
+          context.beginPath();
+          context.arc(x, y, i, startAngle, endAngle, counterClockwise);
+          context.lineWidth = j;
+          j=j-1.2;
+          context.strokeStyle = 'black';
+          context.stroke();}
+          else if (i<201){
+          context.beginPath();
+          context.arc(x, y, i, startAngle, endAngle, counterClockwise);
+          context.lineWidth = 3.4;
+          context.strokeStyle = 'gray';
+          context.stroke();}}
+    </script>
+  </body>
+</html>      

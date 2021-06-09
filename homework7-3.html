@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <title>homework 7-3</title>
+  <body>
+    <canvas id="myCanvas" width="400" height="400" style="border:1px solid #000000;"></canvas>
+    <script>
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      var i;
+
+      for (i=0; i<400; i=i+10){
+        context.beginPath();
+        context.moveTo(i, 0);
+        context.lineTo(i, i);
+        context.lineWidth=2;
+        context.stroke();
+        context.strokeStyle = 'blue';
+        context.stroke();
+      }
+
+      for (i=0; i<400; i=i+10){
+        context.beginPath();
+        context.moveTo(0, i);
+        context.lineTo(i, i);
+        context.lineWidth=2;
+        context.stroke();
+        context.strokeStyle = 'red';
+        context.stroke();
+      }
+    </script>
+  </body>
+</html>  

@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <style>
+            body {
+            margin: 0px;
+            padding: 0px;
+            }
+        </style>
+    </head>
+    <title>homework 7-6</title>
+    <body>
+        <canvas id="myCanvas" width="500" height="500" style="border:1px solid #000000;"></canvas>
+        <script>
+
+            var canvas = document.getElementById('myCanvas');
+            var context = canvas.getContext('2d');
+            var lasttime;    
+
+            var myRectangle = {
+                x: 0,
+                y: 0,
+                width: 50,
+                height: 50,
+                borderWidth: 5
+            };
+
+            var runAnimation = {
+                value: false
+            };
+
+            window.requestAnimFrame = (function(callback) {
+                return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
+                function(callback) {
+                    window.setTimeout(callback, 1000 / 60);
+                };
+            })();
+
+            function drawRect(myRectangle, context) {
+                context.beginPath();
+                context.rect(myRectangle.x, myRectangle.y, myRectangle.width, myRectangle.height);
+                context.fillStyle = '#8ED6FF';
+                context.fill();
+                context.lineWidth = myRectangle.borderWidth;
+                context.strokeStyle = 'black';
+                context.stroke();
+            }
+
+            function animate(myRectangle, runAnimation, canvas, context) {
+                if(runAnimation.value) {
+
+                    var linearDistEachFrame = 5;
+                    if(myRectangle.y == 0 && myRectangle.x < canvas.width-50) {
+                        myRectangle.x  += linearDistEachFrame;
+                    }
+                    if(myRectangle.x == canvas.width-50 && myRectangle.y < canvas.height-50) {
+                        myRectangle.y  += linearDistEachFrame;
+                    }
+                    if(myRectangle.y == canvas.height-50 && myRectangle.x > 0) {
+                        myRectangle.x  -= linearDistEachFrame;
+                    }
+                    if(myRectangle.x == 0 && myRectangle.y > 0) {
+                        myRectangle.y  -= linearDistEachFrame;
+                    }
+            
+                    context.clearRect(0, 0, canvas.width, canvas.height);
+                    drawRect(myRectangle, context);
+
+                    requestAnimFrame(function() {
+                        animate(myRectangle, runAnimation, canvas, context);
+                    });
+                }
+            }
+
+            document.getElementById('myCanvas').addEventListener('click', function() {
+                runAnimation.value = !runAnimation.value;
+                if(runAnimation.value) {
+                    animate(myRectangle, runAnimation, canvas, context);
+                }
+            });
+
+            drawRect(myRectangle, context);
+        </script>
+    </body>
+</html>    

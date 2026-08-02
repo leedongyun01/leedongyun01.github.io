@@ -1,6 +1,6 @@
 /**
  * Backend Developer Portfolio Interactive Logic for leedongyun01
- * Featuring: CollabMate, GiftTrip, NewsCurationPortal
+ * Polished Design & Visual Enhancements
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -21,9 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. Active Navbar Link on Scroll
+    // 2. Active Navbar Link & Back-to-Top Button on Scroll
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
+    const backToTopBtn = document.getElementById('back-to-top-btn');
 
     window.addEventListener('scroll', () => {
         let current = '';
@@ -45,7 +46,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 link.classList.add('active');
             }
         });
+
+        // Back to top visibility
+        if (backToTopBtn) {
+            if (scrollY > 400) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        }
     });
+
+    if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 
     // 3. Project Filter Functionality
     const filterBtns = document.querySelectorAll('.filter-btn');
@@ -69,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 4. Project Modal Data & Interactivity for CollabMate & GiftTrip
+    // 4. Project Modal Data & Interactivity
     const modalData = {
         'collab': {
             title: 'CollabMate - 협업 관리 플랫폼',

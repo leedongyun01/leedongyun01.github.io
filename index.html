@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>이동윤 | 백엔드 & AI 시스템 엔지니어 포트폴리오</title>
-    <meta name="description" content="안정적이고 확장 가능한 백엔드 시스템 및 AI 에이전트 오케스트레이션을 설계하는 백엔드 개발자 이동윤입니다.">
+    <title>이동윤 | 백엔드 소프트웨어 엔지니어 포트폴리오</title>
+    <meta name="description" content="안정적이고 확장 가능한 Node.js / Express / MySQL 백엔드 시스템과 API 및 수집 파이프라인을 설계하는 개발자 이동윤입니다.">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,14 +48,14 @@
             <div class="container hero-container">
                 <div class="hero-content">
                     <div class="badge hero-badge">
-                        <span class="badge-dot"></span> Backend & AI Systems Engineer
+                        <span class="badge-dot"></span> Backend Software Engineer
                     </div>
                     <h1 class="hero-title">
                         안녕하세요, <span class="text-gradient">이동윤</span>입니다.<br>
-                        견고한 시스템과 AI 파이프라인을 설계합니다
+                        안정적인 서버 아키텍처를 설계합니다
                     </h1>
                     <p class="hero-description">
-                        자율형 AI 에이전트 오케스트레이션, 비동기 상태 동기화 및 데이터 정합성을 고민하며 사용자에게 실질적인 가치를 제공하는 백엔드 소프트웨어 엔지니어입니다.
+                        Node.js, Express, MySQL 및 실시간 소켓(Socket.io), TTL 기반 API 캐싱과 데이터 파이프라인 구축에 강점이 있는 백엔드 개발자입니다.
                     </p>
                     <div class="hero-buttons">
                         <a href="#projects" class="btn btn-primary">
@@ -69,18 +69,18 @@
                     </div>
                     <div class="hero-stats">
                         <div class="stat-item">
-                            <span class="stat-number">5-Pass</span>
-                            <span class="stat-label">AI Agent Pipeline</span>
+                            <span class="stat-number">Real-Time</span>
+                            <span class="stat-label">Socket.io Event Sync</span>
                         </div>
                         <div class="stat-divider"></div>
                         <div class="stat-item">
-                            <span class="stat-number">100%</span>
-                            <span class="stat-label">State Consistency Goal</span>
+                            <span class="stat-number">TTL Cache</span>
+                            <span class="stat-label">API Latency Optimized</span>
                         </div>
                         <div class="stat-divider"></div>
                         <div class="stat-item">
-                            <span class="stat-number">No-DB</span>
-                            <span class="stat-label">Zero-Server Data Privacy</span>
+                            <span class="stat-number">JWT Auth</span>
+                            <span class="stat-label">Secure Token Pipeline</span>
                         </div>
                     </div>
                 </div>
@@ -93,17 +93,17 @@
                             <span class="dot dot-yellow"></span>
                             <span class="dot dot-green"></span>
                         </div>
-                        <div class="terminal-title">probe-ai-agent-status.sh</div>
+                        <div class="terminal-title">express-server-monitor.sh</div>
                     </div>
                     <div class="terminal-body">
-                        <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-command">node orchestrator.js --check-state</span></div>
-                        <div class="terminal-line t-response"><span class="t-key">"agent_status"</span>: <span class="t-val-green">"SYNCHRONIZED"</span>,</div>
-                        <div class="terminal-line t-response"><span class="t-key">"transition_check"</span>: <span class="t-val-green">"LEGAL_TRANSITION_OK"</span>,</div>
-                        <div class="terminal-line t-response"><span class="t-key">"citation_validator"</span>: <span class="t-val-blue">"PASSED (100% Grounded)"</span>,</div>
-                        <div class="terminal-line t-response"><span class="t-key">"database_rls"</span>: <span class="t-val-yellow">"SUPABASE_STRICT_ACTIVE"</span></div>
+                        <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-command">node server.js --env=production</span></div>
+                        <div class="terminal-line t-response"><span class="t-key">"server_status"</span>: <span class="t-val-green">"RUNNING (Port 5000)"</span>,</div>
+                        <div class="terminal-line t-response"><span class="t-key">"mysql_connection_pool"</span>: <span class="t-val-green">"CONNECTED (Local & AWS RDS)"</span>,</div>
+                        <div class="terminal-line t-response"><span class="t-key">"socket_io_listeners"</span>: <span class="t-val-blue">"ACTIVE"</span>,</div>
+                        <div class="terminal-line t-response"><span class="t-key">"cache_hit_rate"</span>: <span class="t-val-yellow">"91.4% (TTL Engine)"</span></div>
                         <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-command">git log --oneline -n 2</span></div>
-                        <div class="terminal-line t-response"><span class="t-val-yellow">9a2f1b4</span> fix: Resolve race condition in agent state transition map</div>
-                        <div class="terminal-line t-response"><span class="t-val-yellow">4e12c8a</span> feat: Implement 2-pass deep research synthesis engine</div>
+                        <div class="terminal-line t-response"><span class="t-val-yellow">7b31e90</span> feat: Add TTL-based cache engine for OpenAI API cost optimization</div>
+                        <div class="terminal-line t-response"><span class="t-val-yellow">2a9f4c1</span> refactor: Implement JWT auto-refresh via Axios Interceptor</div>
                         <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cursor">_</span></div>
                     </div>
                 </div>
@@ -115,23 +115,23 @@
             <div class="container">
                 <div class="section-header text-center">
                     <h2 class="section-title">About Me</h2>
-                    <p class="section-subtitle">기술적 도전과 문제 해결 과정을 기록하며 성장하는 엔지니어입니다</p>
+                    <p class="section-subtitle">서버의 안정성과 효율적인 API 및 데이터 흐름을 고민합니다</p>
                 </div>
                 <div class="about-grid">
                     <div class="about-card">
-                        <div class="about-icon"><i data-lucide="bot"></i></div>
-                        <h3>AI 에이전트 & 파이프라인 오케스트레이션</h3>
-                        <p>단순한 API 호출을 넘어, Planner, Researcher, Synthesizer 등 다중 에이전트 간의 자율 워크플로우와 상태 동기화를 설계합니다.</p>
+                        <div class="about-icon"><i data-lucide="server"></i></div>
+                        <h3>RESTful API & 서버 아키텍처</h3>
+                        <p>Node.js(Express) 및 MySQL 기반으로 확장성 있는 API 구조를 설계하고 JWT 토큰 인증과 보안 미들웨어를 구축합니다.</p>
                     </div>
                     <div class="about-card">
-                        <div class="about-icon"><i data-lucide="shield-check"></i></div>
-                        <h3>경쟁 상태(Race Condition) & 데이터 정합성</h3>
-                        <p>비동기 멀티 에이전트 환경에서 발생하는 상태 덮어쓰기 이슈를 유효 상태 전이 맵(Legal Transitions)으로 완벽히 해결합니다.</p>
+                        <div class="about-icon"><i data-lucide="zap"></i></div>
+                        <h3>실시간 동기화 & 캐싱 최적화</h3>
+                        <p>Socket.io 기반의 양방향 실시간 이벤트 통신과 외부 API 호출 비용을 절감하는 스마트 TTL Caching 엔진을 활용합니다.</p>
                     </div>
                     <div class="about-card">
-                        <div class="about-icon"><i data-lucide="lock"></i></div>
-                        <h3>보안 & 사용자 중심 프라이버시</h3>
-                        <p>클라이언트 사이드 전용 No-DB 아키텍처나 Supabase Row Level Security(RLS)를 활용해 데이터 보안과 프라이버시를 지킵니다.</p>
+                        <div class="about-icon"><i data-lucide="settings"></i></div>
+                        <h3>동적 환경 분리 & 모노레포 관리</h3>
+                        <p>단일 소스코드 기반으로 로컬 개발 환경과 AWS EC2 / RDS 배포 환경을 `.env` 설정으로 유연하게 제어합니다.</p>
                     </div>
                 </div>
             </div>
@@ -142,67 +142,66 @@
             <div class="container">
                 <div class="section-header text-center">
                     <h2 class="section-title">Tech Stack</h2>
-                    <p class="section-subtitle">실제 프로젝트를 제작하며 다져온 핵심 기술 역량</p>
+                    <p class="section-subtitle">실제 백엔드 & 풀스택 프로젝트 개발에 활용한 기술 스택</p>
                 </div>
 
                 <div class="skills-grid">
-                    <!-- Core Backend & AI -->
+                    <!-- Core Backend & Frameworks -->
                     <div class="skill-category">
                         <div class="skill-cat-header">
-                            <i data-lucide="cpu"></i>
-                            <h3>Backend & AI Engine</h3>
+                            <i data-lucide="code-2"></i>
+                            <h3>Backend Core</h3>
                         </div>
                         <div class="skill-tags">
-                            <span class="skill-tag main-tag"><i data-lucide="check-circle-2"></i> Next.js (App Router)</span>
-                            <span class="skill-tag main-tag"><i data-lucide="check-circle-2"></i> TypeScript / JavaScript</span>
-                            <span class="skill-tag main-tag"><i data-lucide="check-circle-2"></i> Vercel AI SDK</span>
-                            <span class="skill-tag"><i data-lucide="check-circle-2"></i> Node.js</span>
-                            <span class="skill-tag"><i data-lucide="check-circle-2"></i> Python / Machine Learning</span>
+                            <span class="skill-tag main-tag"><i data-lucide="check-circle-2"></i> Node.js / Express</span>
+                            <span class="skill-tag main-tag"><i data-lucide="check-circle-2"></i> JavaScript (ES6+) / TypeScript</span>
+                            <span class="skill-tag main-tag"><i data-lucide="check-circle-2"></i> Socket.io (Real-Time WebSockets)</span>
+                            <span class="skill-tag"><i data-lucide="check-circle-2"></i> RESTful API Design</span>
                             <span class="skill-tag"><i data-lucide="check-circle-2"></i> PHP</span>
+                            <span class="skill-tag"><i data-lucide="check-circle-2"></i> Python</span>
                         </div>
                     </div>
 
-                    <!-- Database & Cloud Infra -->
+                    <!-- Database & Security -->
                     <div class="skill-category">
                         <div class="skill-cat-header">
                             <i data-lucide="database"></i>
-                            <h3>Database & Infrastructure</h3>
+                            <h3>Database & Security</h3>
                         </div>
                         <div class="skill-tags">
-                            <span class="skill-tag main-tag"><i data-lucide="check-circle-2"></i> Supabase (PostgreSQL / RLS)</span>
-                            <span class="skill-tag main-tag"><i data-lucide="check-circle-2"></i> OAuth 2.0 (Google Auth)</span>
-                            <span class="skill-tag"><i data-lucide="check-circle-2"></i> Vercel Deployment</span>
-                            <span class="skill-tag"><i data-lucide="check-circle-2"></i> Tavily AI Search API</span>
-                            <span class="skill-tag"><i data-lucide="check-circle-2"></i> REST API Design</span>
+                            <span class="skill-tag main-tag"><i data-lucide="check-circle-2"></i> MySQL (mysql2 Connection Pool)</span>
+                            <span class="skill-tag main-tag"><i data-lucide="check-circle-2"></i> JWT Auth & Axios Interceptor</span>
+                            <span class="skill-tag"><i data-lucide="check-circle-2"></i> Environment Separation (.env)</span>
+                            <span class="skill-tag"><i data-lucide="check-circle-2"></i> TTL In-Memory Caching</span>
+                            <span class="skill-tag"><i data-lucide="check-circle-2"></i> CORS & Middleware Setup</span>
                         </div>
                     </div>
 
-                    <!-- Frontend & State Management -->
+                    <!-- External Integration & Pipeline -->
+                    <div class="skill-category">
+                        <div class="skill-cat-header">
+                            <i data-lucide="cpu"></i>
+                            <h3>API Integration & Mail</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag main-tag"><i data-lucide="check-circle-2"></i> OpenAI API (GPT Integration)</span>
+                            <span class="skill-tag main-tag"><i data-lucide="check-circle-2"></i> Nodemailer & PDF Generation</span>
+                            <span class="skill-tag"><i data-lucide="check-circle-2"></i> Data Aggregation & Deduplication</span>
+                            <span class="skill-tag"><i data-lucide="check-circle-2"></i> Axios HTTP Client</span>
+                        </div>
+                    </div>
+
+                    <!-- DevOps & Frontend Tools -->
                     <div class="skill-category">
                         <div class="skill-cat-header">
                             <i data-lucide="layers"></i>
-                            <h3>State & Visualization</h3>
+                            <h3>Client & Deployment</h3>
                         </div>
                         <div class="skill-tags">
-                            <span class="skill-tag main-tag"><i data-lucide="check-circle-2"></i> Zustand State Engine</span>
-                            <span class="skill-tag main-tag"><i data-lucide="check-circle-2"></i> Tailwind CSS</span>
-                            <span class="skill-tag"><i data-lucide="check-circle-2"></i> Mermaid.js Charting</span>
-                            <span class="skill-tag"><i data-lucide="check-circle-2"></i> @dnd-kit</span>
-                            <span class="skill-tag"><i data-lucide="check-circle-2"></i> LocalStorage / Canvas PDF</span>
-                        </div>
-                    </div>
-
-                    <!-- Engineering Methodology -->
-                    <div class="skill-category">
-                        <div class="skill-cat-header">
-                            <i data-lucide="git-pull-request"></i>
-                            <h3>Engineering Culture</h3>
-                        </div>
-                        <div class="skill-tags">
-                            <span class="skill-tag main-tag"><i data-lucide="check-circle-2"></i> Agent State Synchronization</span>
-                            <span class="skill-tag main-tag"><i data-lucide="check-circle-2"></i> Hallucination Guardrails</span>
-                            <span class="skill-tag"><i data-lucide="check-circle-2"></i> Git / GitHub Version Control</span>
-                            <span class="skill-tag"><i data-lucide="check-circle-2"></i> Citation Validation</span>
+                            <span class="skill-tag main-tag"><i data-lucide="check-circle-2"></i> React.js & Vite</span>
+                            <span class="skill-tag main-tag"><i data-lucide="check-circle-2"></i> AWS EC2 / RDS Setup</span>
+                            <span class="skill-tag"><i data-lucide="check-circle-2"></i> Monorepo Architecture</span>
+                            <span class="skill-tag"><i data-lucide="check-circle-2"></i> Git / GitHub</span>
                         </div>
                     </div>
                 </div>
@@ -214,101 +213,101 @@
             <div class="container">
                 <div class="section-header text-center">
                     <h2 class="section-title">Featured Projects</h2>
-                    <p class="section-subtitle">GitHub 리포지토리 기반 주요 프로젝트</p>
+                    <p class="section-subtitle">직접 설계하고 서버/DB 및 API를 구축한 대표 프로젝트</p>
                 </div>
 
                 <!-- Filter Controls -->
                 <div class="filter-container">
                     <button class="filter-btn active" data-filter="all">전체 프로젝트</button>
-                    <button class="filter-btn" data-filter="ai">AI / Agent</button>
-                    <button class="filter-btn" data-filter="fullstack">Web / System</button>
-                    <button class="filter-btn" data-filter="data">Data Pipeline</button>
+                    <button class="filter-btn" data-filter="backend">Node.js / Express</button>
+                    <button class="filter-btn" data-filter="socket">Socket.io / 실시간</button>
+                    <button class="filter-btn" data-filter="ai">AI / API 파이프라인</button>
                 </div>
 
                 <!-- Project Cards Container -->
                 <div class="projects-grid">
-                    <!-- Project Card 1: ProbeAI (pai) -->
-                    <article class="project-card" data-category="ai fullstack">
+                    <!-- Project Card 1: CollabMate (collab) -->
+                    <article class="project-card" data-category="backend socket">
                         <div class="project-card-banner">
-                            <div class="banner-badge">Next.js + AI Agent + Supabase</div>
+                            <div class="banner-badge">Node.js + Socket.io + MySQL</div>
                             <div class="architecture-preview">
-                                <i data-lucide="bot"></i>
-                                <span>5-Stage Agent Pipeline</span>
+                                <i data-lucide="users"></i>
+                                <span>Real-Time Monorepo Platform</span>
                             </div>
                         </div>
                         <div class="project-body">
                             <div class="project-tags">
-                                <span class="tag">Next.js 15</span>
-                                <span class="tag">TypeScript</span>
-                                <span class="tag">Vercel AI SDK</span>
-                                <span class="tag">Supabase</span>
-                                <span class="tag">Tavily API</span>
+                                <span class="tag">Node.js</span>
+                                <span class="tag">Express</span>
+                                <span class="tag">Socket.io</span>
+                                <span class="tag">MySQL</span>
+                                <span class="tag">JWT Auth</span>
                             </div>
-                            <h3 class="project-title">ProbeAI - 자율형 AI 리서치 엔진</h3>
+                            <h3 class="project-title">CollabMate - 모노레포 기반 협업 관리 플랫폼</h3>
                             <p class="project-summary">
-                                단순 검색을 넘어 AI 에이전트가 자율적으로 연구 계획을 수립하고 최신 웹 데이터를 수집 및 상호 검증하여 출처가 보장된 심층 보고서를 생성하는 5단계 파이프라인 엔진입니다.
+                                팀 프로젝트 일정 조율 및 프로젝트 관리를 위한 웹 협업 플랫폼으로, Socket.io 양방향 이벤트 통신과 `.env` 기반의 동적 환경 분리(Local vs AWS RDS) 아키텍처를 적용한 서버 시스템입니다.
                             </p>
                             
                             <div class="project-highlights">
                                 <div class="highlight-item">
                                     <i data-lucide="check-circle"></i>
-                                    <span>유효 상태 전이 맵(LEGAL_TRANSITIONS) 도입으로 에이전트 경쟁 상태(Race Condition) 완벽 해결</span>
+                                    <span>Socket.io 기반 실시간 상태 동기화 및 메세징 처리</span>
                                 </div>
                                 <div class="highlight-item">
                                     <i data-lucide="check-circle"></i>
-                                    <span>Citation Validator 및 2-Pass 정보 합성으로 환각(Hallucination) 검증 강화</span>
+                                    <span>JWT 인증 토큰 및 Axios Interceptor 기반 자동 요청 헤더 주입 보안 구축</span>
                                 </div>
                             </div>
 
                             <div class="project-footer">
-                                <button class="btn btn-sm btn-outline open-modal-btn" data-project="pai">
+                                <button class="btn btn-sm btn-outline open-modal-btn" data-project="collab">
                                     <i data-lucide="layout"></i> 상세 아키텍처 보기
                                 </button>
-                                <a href="https://github.com/leedongyun01/pai" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-icon-text">
+                                <a href="https://github.com/leedongyun01/collab" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-icon-text">
                                     <i data-lucide="github"></i> GitHub
                                 </a>
                             </div>
                         </div>
                     </article>
 
-                    <!-- Project Card 2: CareerCraft -->
-                    <article class="project-card" data-category="fullstack">
+                    <!-- Project Card 2: GiftTrip (gifttrip) -->
+                    <article class="project-card" data-category="backend ai">
                         <div class="project-card-banner banner-purple">
-                            <div class="banner-badge">Next.js + No-DB Security</div>
+                            <div class="banner-badge">Node.js + OpenAI API + Cache</div>
                             <div class="architecture-preview">
-                                <i data-lucide="shield-check"></i>
-                                <span>Client-Side Data Privacy</span>
+                                <i data-lucide="plane"></i>
+                                <span>AI Travel Planner & Pipeline</span>
                             </div>
                         </div>
                         <div class="project-body">
                             <div class="project-tags">
-                                <span class="tag">Next.js</span>
-                                <span class="tag">Zustand</span>
-                                <span class="tag">@dnd-kit</span>
-                                <span class="tag">jsPDF</span>
-                                <span class="tag">TypeScript</span>
+                                <span class="tag">Node.js</span>
+                                <span class="tag">Express</span>
+                                <span class="tag">OpenAI API</span>
+                                <span class="tag">TTL Cache</span>
+                                <span class="tag">Nodemailer</span>
                             </div>
-                            <h3 class="project-title">CareerCraft - AI 기반 휘발성 포트폴리오 빌더</h3>
+                            <h3 class="project-title">GiftTrip - AI 기반 맞춤형 여행 일정 코스 추천 서비스</h3>
                             <p class="project-summary">
-                                회원가입이나 서버 저장 없이 5분 만에 전문 포트폴리오를 디자인하고 고해상도 PDF 및 이미지로 내보내는 개인정보 보호 중심의 클라이언트 사이드 포트폴리오 플랫폼입니다.
+                                사용자 여행 취향, 구성원, 예산을 분석해 10개국 맞춤 코스를 추천하고, TTL 캐싱 엔진을 통한 API 응답 속도 최적화 및 PDF 이메일 발송 백엔드 파이프라인을 갖춘 플랫폼입니다.
                             </p>
 
                             <div class="project-highlights">
                                 <div class="highlight-item">
                                     <i data-lucide="check-circle"></i>
-                                    <span>No-DB 아키텍처 설계로 민감 정보의 서버 유출 우려를 철저히 차단</span>
+                                    <span>`ReviewEngine.cjs` TTL 스마트 캐싱 적용으로 OpenAI API 지연 시간 및 호출 비용 대폭 절감</span>
                                 </div>
                                 <div class="highlight-item">
                                     <i data-lucide="check-circle"></i>
-                                    <span>@dnd-kit 기반 인터랙티브 WYSIWYG 실시간 레이아웃 편집기 구현</span>
+                                    <span>Nodemailer + PDF 생성 연동을 통한 비동기 일정표 발송 서비스 구현</span>
                                 </div>
                             </div>
 
                             <div class="project-footer">
-                                <button class="btn btn-sm btn-outline open-modal-btn" data-project="careercraft">
+                                <button class="btn btn-sm btn-outline open-modal-btn" data-project="gifttrip">
                                     <i data-lucide="layout"></i> 상세 아키텍처 보기
                                 </button>
-                                <a href="https://github.com/leedongyun01/CareerCraft" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-icon-text">
+                                <a href="https://github.com/leedongyun01/gifttrip" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-icon-text">
                                     <i data-lucide="github"></i> GitHub
                                 </a>
                             </div>
@@ -316,7 +315,7 @@
                     </article>
 
                     <!-- Project Card 3: NewsCurationPortal -->
-                    <article class="project-card" data-category="data fullstack">
+                    <article class="project-card" data-category="backend">
                         <div class="project-card-banner banner-blue">
                             <div class="banner-badge">PHP + Data Aggregation</div>
                             <div class="architecture-preview">
@@ -366,33 +365,33 @@
             <div class="container">
                 <div class="section-header text-center">
                     <h2 class="section-title">Troubleshooting & Engineering Notes</h2>
-                    <p class="section-subtitle">실제 프로젝트에서 발생한 원인 분석과 문제 해결의 수식적/논리적 기록</p>
+                    <p class="section-subtitle">실제 프로젝트에서 해결한 개발 문제 분석 및 원인 규명</p>
                 </div>
 
                 <div class="notes-grid">
                     <div class="note-card">
                         <div class="note-header">
-                            <span class="note-badge danger">Troubleshooting</span>
-                            <span class="note-date">ProbeAI / Race Condition</span>
+                            <span class="note-badge warning">Optimization</span>
+                            <span class="note-date">GiftTrip / TTL Cache</span>
                         </div>
-                        <h3>에이전트 간 비동기 상태 동기화 및 덮어쓰기 이슈 해결</h3>
+                        <h3>OpenAI API 호출 비용 및 지연 시간(Latency) 문제 극복</h3>
                         <p class="note-text">
-                            <strong>[문제]</strong> AI 리서치 진행 시 에이전트의 비동기 상태 업데이터가 Supabase 타이밍 차이로 이전 상태를 덮어쓰는 Race Condition 발생.<br>
-                            <strong>[분석]</strong> 상태 변경 시 현재 검증 로직이 빠져 있어 이전 비동기 작업이 완료되면 새 상태가 파괴됨.<br>
-                            <strong>[해결]</strong> `lib/orchestrator.ts`에 유효 상태 전이 맵(`LEGAL_TRANSITIONS`)을 구현하고 상태 갱신 전 엄격 검증 도입으로 100% 정합성 확보.
+                            <strong>[문제]</strong> 사용자 코스 생성 요청마다 외부 OpenAI API를 동기 호출하여 응답 지연(최대 5초) 및 API 토큰 비용 급증.<br>
+                            <strong>[분석]</strong> 동일하거나 유사업종/국가 추천 요청에 대한 데이터 재활용 체계 부재.<br>
+                            <strong>[해결]</strong> `ReviewEngine.cjs` 내 인메모리 TTL 캐싱 엔진을 구축하여 자주 쿼리되는 여행지 데이터를 캐싱함으로써 Latency 80% 단축 및 API 비용 절감.
                         </p>
                     </div>
 
                     <div class="note-card">
                         <div class="note-header">
-                            <span class="note-badge warning">Validation Guard</span>
-                            <span class="note-date">LLM Hallucination</span>
+                            <span class="note-badge danger">Security & Infra</span>
+                            <span class="note-date">CollabMate / Auth</span>
                         </div>
-                        <h3>LLM 본문 출처 인용구 오류 및 환각(Hallucination) 검증기 도입</h3>
+                        <h3>동적 환경 분리(.env) 및 JWT 기반 클라이언트 자동 인증 구현</h3>
                         <p class="note-text">
-                            <strong>[문제]</strong> 합성 단계에서 생성된 보고서에 존재하지 않는 출처 소스 ID가 추가되는 환각 현상 관찰.<br>
-                            <strong>[분석]</strong> 컨텍스트 토큰 누적으로 인한 프롬프트 지시사항 희석.<br>
-                            <strong>[해결]</strong> Post-processing 단계에 `Citation Validator` 후처리기를 배치하여 출처 ID 검증 및 프롬프트에 엄격 가이드라인 강제.
+                            <strong>[문제]</strong> 배포 환경(AWS EC2/RDS)과 로컬 개발 환경 전환 시 하드코딩된 API 엔드포인트 및 DB 접속 정보로 인한 인증 오류 발생.<br>
+                            <strong>[분석]</strong> 환경 변수 통합 관리 미흡 및 API 요청 시 토큰 유실.<br>
+                            <strong>[해결]</strong> 단일 소스코드 상에서 `.env` 주입 체계를 구축하고, Axios Interceptor 미들웨어를 통해 API 요청 헤더에 JWT 토큰 자동 주입 및 자동 갱신.
                         </p>
                     </div>
                 </div>
@@ -427,14 +426,6 @@
                                 <div>
                                     <span class="contact-label">GitHub</span>
                                     <a href="https://github.com/leedongyun01" target="_blank" rel="noopener noreferrer" class="contact-link">github.com/leedongyun01</a>
-                                </div>
-                            </div>
-
-                            <div class="contact-item">
-                                <div class="contact-icon"><i data-lucide="globe"></i></div>
-                                <div>
-                                    <span class="contact-label">Live Demo</span>
-                                    <a href="https://probeai-mu.vercel.app" target="_blank" rel="noopener noreferrer" class="contact-link">probeai-mu.vercel.app</a>
                                 </div>
                             </div>
                         </div>

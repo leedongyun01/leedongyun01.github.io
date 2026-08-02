@@ -1,5 +1,6 @@
 /**
  * Backend Developer Portfolio Interactive Logic for leedongyun01
+ * Featuring: CollabMate, GiftTrip, NewsCurationPortal
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -68,72 +69,71 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 4. Project Modal Data & Interactivity for leedongyun01 Repos
+    // 4. Project Modal Data & Interactivity for CollabMate & GiftTrip
     const modalData = {
-        'pai': {
-            title: 'ProbeAI - 자율형 AI 리서치 엔진 & 파이프라인',
-            category: 'Next.js 15 / Vercel AI SDK / Supabase / Tavily API',
+        'collab': {
+            title: 'CollabMate - 협업 관리 플랫폼',
+            category: 'Node.js / Express.js / Socket.io / MySQL / React',
             architecture: `
                 <div class="arch-box">
-                    <div class="arch-box-title">5-Stage Agent Orchestration Architecture</div>
+                    <div class="arch-box-title">Monorepo & Real-Time Socket Architecture</div>
                     <div class="arch-flow">
-                        <div class="arch-node">1. Analyzer</div>
-                        <div class="arch-arrow">➔</div>
-                        <div class="arch-node">2. Planner</div>
-                        <div class="arch-arrow">➔</div>
-                        <div class="arch-node">3. Research Engine (Tavily)</div>
-                        <div class="arch-arrow">➔</div>
-                        <div class="arch-node">4. Synthesizer</div>
-                        <div class="arch-arrow">➔</div>
-                        <div class="arch-node">5. Visualizer</div>
+                        <div class="arch-node">React Client</div>
+                        <div class="arch-arrow">⇄ (Socket.io)</div>
+                        <div class="arch-node">Express Server</div>
+                        <div class="arch-arrow">➔ (mysql2 Pool)</div>
+                        <div class="arch-node">MySQL DB</div>
+                        <div class="arch-arrow">➔ (.env Auth)</div>
+                        <div class="arch-node">AWS EC2 / RDS</div>
                     </div>
                 </div>
             `,
             description: `
-                <h3 class="modal-section-h3">핵심 엔지니어링 및 기술적 의사결정</h3>
+                <h3 class="modal-section-h3">핵심 백엔드 엔지니어링 포인트</h3>
                 <ul class="modal-list">
-                    <li><strong>에이전트 경쟁 상태(Race Condition) 해결:</strong> 복잡한 리서치 중 Supabase 비동기 타이밍 이슈로 상태가 덮어써지는 현상을 분석했습니다. 유효 상태 전이 맵(LEGAL_TRANSITIONS)을 `lib/orchestrator.ts`에 구축하여 검증 로직으로 해결했습니다.</li>
-                    <li><strong>LLM 환각(Hallucination) 방지:</strong> 수집된 웹 데이터 간의 모순을 식별하는 2-Pass 합성 엔진 및 출처 ID 유효성을 전수 검사하는 Citation Validator 후처리기를 제작했습니다.</li>
-                    <li><strong>컨텍스트 윈도우(Context Window) 최적화:</strong> 대용량 웹 스크래핑 결과물에서 불필요한 태그/공백을 제거하는 전처리를 거쳐 토큰 비용 절감 및 렌더링 속도를 대폭 개선했습니다.</li>
+                    <li><strong>Socket.io 양방향 실시간 동기화:</strong> 팀원 간 실시간 이벤트 메세징 및 동시 프로젝트 상태 갱신을 위해 Socket.io 이벤트를 연결하고 브로드캐스팅 파이프라인을 설계했습니다.</li>
+                    <li><strong>JWT 인증 & Axios Interceptor:</strong> 토큰 기반 인증 방식을 구축하고, 클라이언트 요청 시 헤더에 토큰을 자동으로 주입하는 미들웨어 인증 처리를 완성했습니다.</li>
+                    <li><strong>환경 분리 (.env) & Monorepo:</strong> 단일 코드베이스에서 로컬(Localhost) 및 AWS EC2/RDS 서버 배포 환경을 동적으로 전환 지원하도록 환경변수 시스템을 구축했습니다.</li>
                 </ul>
 
                 <h3 class="modal-section-h3">기술 스택 상세</h3>
                 <ul class="modal-list">
-                    <li>Next.js 15+ (App Router), TypeScript, Vercel AI SDK</li>
-                    <li>Supabase (PostgreSQL, Row Level Security, Auth)</li>
-                    <li>Tavily Search API, Mermaid.js, Tailwind CSS</li>
+                    <li>Backend: Node.js, Express.js, Socket.io, mysql2 Connection Pool</li>
+                    <li>Database: MySQL, JWT Auth, dotenv</li>
+                    <li>Frontend: React.js, Axios, Monorepo Architecture</li>
                 </ul>
             `
         },
-        'careercraft': {
-            title: 'CareerCraft - AI 기반 휘발성 포트폴리오 빌더',
-            category: 'Next.js / Zustand / @dnd-kit / jsPDF',
+        'gifttrip': {
+            title: 'GiftTrip - AI 기반 맞춤형 여행 일정 추천 서비스',
+            category: 'Node.js / Express / OpenAI API / TTL Cache / Nodemailer',
             architecture: `
                 <div class="arch-box">
-                    <div class="arch-box-title">Client-Side Zero-Database Architecture</div>
+                    <div class="arch-box-title">AI Recommendation Engine & Mailing Pipeline</div>
                     <div class="arch-flow">
-                        <div class="arch-node">User Input Form</div>
+                        <div class="arch-node">Vite/React Client</div>
                         <div class="arch-arrow">➔</div>
-                        <div class="arch-node">Zustand State Store</div>
+                        <div class="arch-node">Express API Server</div>
+                        <div class="arch-arrow">➔ (ReviewEngine TTL Cache)</div>
+                        <div class="arch-node">OpenAI LLM API</div>
                         <div class="arch-arrow">➔</div>
-                        <div class="arch-node">LocalStorage (Auto Save)</div>
-                        <div class="arch-arrow">➔</div>
-                        <div class="arch-node">html2canvas + jsPDF</div>
+                        <div class="arch-node">Nodemailer (PDF Export)</div>
                     </div>
                 </div>
             `,
             description: `
-                <h3 class="modal-section-h3">핵심 엔지니어링 및 기술적 의사결정</h3>
+                <h3 class="modal-section-h3">핵심 백엔드 엔지니어링 포인트</h3>
                 <ul class="modal-list">
-                    <li><strong>보안 중심 No-DB 설계:</strong> 개인 이력 데이터가 서버 DB로 누출되는 리스크를 원천 차단하기 위해 100% 브라우저 메모리 및 LocalStorage 기반 아키텍처를 도입했습니다.</li>
-                    <li><strong>실시간 WYSIWYG 드래그 앤 드롭:</strong> `@dnd-kit`을 활용하여 인적사항, 프로젝트, 경력 등 자유로운 섹션 재배치 및 실시간 테마 프리셋 연동을 구현했습니다.</li>
-                    <li><strong>고해상도 렌더링 PDF 내보내기:</strong> Base64 인코딩 및 이미지 캔버스 처리를 결합하여 브라우저 환경에서도 인쇄 품질 수준의 A4 PDF 작성을 실현했습니다.</li>
+                    <li><strong>`ReviewEngine.cjs` TTL 스마트 캐싱:</strong> OpenAI LLM API 호출 지연 시간과 비용을 최소화하기 위해 캐싱 엔지니어링을 적용, 자주 조회되는 여행 코스 요청의 Response Time을 80% 단축했습니다.</li>
+                    <li><strong>PDF 생성 & 이메일 발송 파이프라인:</strong> 생성된 맞춤형 일정을 PDF 파일로 변환하여 사용자의 이메일로 비동기 전송하는 Nodemailer 파이프라인을 구축했습니다.</li>
+                    <li><strong>글로벌 10개국 추천 엔진:</strong> 국가별 비자, 준비물, 예산, 여행 동행자 옵션을 계층화하여 알고리즘 및 LLM 프롬프트에 동적으로 바인딩했습니다.</li>
                 </ul>
 
                 <h3 class="modal-section-h3">기술 스택 상세</h3>
                 <ul class="modal-list">
-                    <li>Next.js, TypeScript, Zustand State Engine</li>
-                    <li>@dnd-kit/core, jsPDF, html2canvas, Tailwind CSS</li>
+                    <li>Backend: Node.js, Express.js, OpenAI GPT-4 API</li>
+                    <li>Optimization & Pipeline: ReviewEngine.cjs (TTL Caching), Nodemailer, PDF Generator</li>
+                    <li>Frontend: React.js, Vite, Tailwind CSS</li>
                 </ul>
             `
         },
@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             `,
             description: `
-                <h3 class="modal-section-h3">핵심 엔지니어링 및 기술적 의사결정</h3>
+                <h3 class="modal-section-h3">핵심 백엔드 엔지니어링 포인트</h3>
                 <ul class="modal-list">
                     <li><strong>뉴스 데이터 정제 파이프라인:</strong> 여러 출처의 뉴스 수집 시 중복 기사를 분류하고 카테고리별 키워드 태깅을 자동화했습니다.</li>
                     <li><strong>안정적인 API 엔드포인트:</strong> 파라미터 기반 필터링 및 카테고리별 큐레이션 REST API 구조를 정립했습니다.</li>

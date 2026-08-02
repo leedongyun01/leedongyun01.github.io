@@ -1,6 +1,6 @@
 /**
  * Backend Developer Portfolio Interactive Logic for leedongyun01
- * Polished Design & Visual Enhancements
+ * Polished & Guaranteed Modal Interactivity
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 4. Project Modal Data & Interactivity
+    // 4. Project Modal Data & Guaranteed Event Delegation
     const modalData = {
         'collab': {
             title: 'CollabMate - 협업 관리 플랫폼',
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
             description: `
                 <h3 class="modal-section-h3">핵심 백엔드 엔지니어링 포인트</h3>
                 <ul class="modal-list">
-                    <li><strong>`ReviewEngine.cjs` TTL 스마트 캐싱:</strong> OpenAI LLM API 호출 지연 시간과 비용을 최소화하기 위해 캐싱 엔지니어링을 적용, 자주 조회되는 여행 코스 요청의 Response Time을 80% 단축했습니다.</li>
+                    <li><strong>ReviewEngine.cjs TTL 스마트 캐싱:</strong> OpenAI LLM API 호출 지연 시간과 비용을 최소화하기 위해 캐싱 엔지니어링을 적용, 자주 조회되는 여행 코스 요청의 Response Time을 80% 단축했습니다.</li>
                     <li><strong>PDF 생성 & 이메일 발송 파이프라인:</strong> 생성된 맞춤형 일정을 PDF 파일로 변환하여 사용자의 이메일로 비동기 전송하는 Nodemailer 파이프라인을 구축했습니다.</li>
                     <li><strong>글로벌 10개국 추천 엔진:</strong> 국가별 비자, 준비물, 예산, 여행 동행자 옵션을 계층화하여 알고리즘 및 LLM 프롬프트에 동적으로 바인딩했습니다.</li>
                 </ul>
@@ -192,9 +192,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalBody = document.getElementById('modal-body');
     const modalCloseBtn = document.getElementById('modal-close-btn');
 
-    document.querySelectorAll('.open-modal-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const projectId = btn.getAttribute('data-project');
+    // Event Delegation for modal trigger
+    document.addEventListener('click', (e) => {
+        const triggerBtn = e.target.closest('.open-modal-btn');
+        if (triggerBtn) {
+            e.preventDefault();
+            const projectId = triggerBtn.getAttribute('data-project');
             const data = modalData[projectId];
 
             if (data && modalBody && modal) {
@@ -205,24 +208,42 @@ document.addEventListener('DOMContentLoaded', () => {
                     ${data.description}
                 `;
                 modal.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
                 if (window.lucide) {
                     lucide.createIcons();
                 }
             }
-        });
+        }
     });
 
-    if (modalCloseBtn && modal) {
-        modalCloseBtn.addEventListener('click', () => {
+    function closeModal() {
+        if (modal) {
             modal.classList.remove('active');
-        });
+            document.body.style.overflow = ''; // Restore background scrolling
+        }
+    }
 
+    if (modalCloseBtn) {
+        modalCloseBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            closeModal();
+        });
+    }
+
+    if (modal) {
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
-                modal.classList.remove('active');
+                closeModal();
             }
         });
     }
+
+    // Escape key to close modal
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeModal();
+        }
+    });
 
     // 5. Copy Email Functionality
     const copyEmailBtn = document.getElementById('copy-email-btn');
@@ -230,7 +251,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const toast = document.getElementById('toast');
 
     if (copyEmailBtn && emailText && toast) {
-        copyEmailBtn.addEventListener('click', () => {
+        copyEmailBtn.addEventListener('click', (e) => {
+            e.preventDefault();
             const textToCopy = emailText.innerText;
             navigator.clipboard.writeText(textToCopy).then(() => {
                 showToast('이메일 주소가 클립보드에 복사되었습니다.');

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이동윤 | 백엔드 & AI 시스템 엔지니어 포트폴리오</title>
+    <meta name="description" content="안정적이고 확장 가능한 백엔드 시스템 및 AI 에이전트 오케스트레이션을 설계하는 백엔드 개발자 이동윤입니다.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons (CDN) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-accent">&lt;/&gt;</span> DONGYUN.DEV
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#troubleshooting" class="nav-link">Troubleshooting</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="https://github.com/leedongyun01" target="_blank" rel="noopener noreferrer" class="btn-icon" title="GitHub Repository">
+                    <i data-lucide="github"></i>
+                </a>
+                <button class="mobile-menu-toggle" id="menu-toggle" aria-label="메뉴 열기">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="hero-bg-glow"></div>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="badge hero-badge">
+                        <span class="badge-dot"></span> Backend & AI Systems Engineer
+                    </div>
+                    <h1 class="hero-title">
+                        안녕하세요, <span class="text-gradient">이동윤</span>입니다.<br>
+                        견고한 시스템과 AI 파이프라인을 설계합니다
+                    </h1>
+                    <p class="hero-description">
+                        자율형 AI 에이전트 오케스트레이션, 비동기 상태 동기화 및 데이터 정합성을 고민하며 사용자에게 실질적인 가치를 제공하는 백엔드 소프트웨어 엔지니어입니다.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>대표 프로젝트 보기</span>
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                        <a href="https://github.com/leedongyun01" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            <i data-lucide="github"></i>
+                            <span>GitHub 방문하기</span>
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">5-Pass</span>
+                            <span class="stat-label">AI Agent Pipeline</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">State Consistency Goal</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number">No-DB</span>
+                            <span class="stat-label">Zero-Server Data Privacy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Terminal Mockup -->
+                <div class="hero-terminal">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot dot-red"></span>
+                            <span class="dot dot-yellow"></span>
+                            <span class="dot dot-green"></span>
+                        </div>
+                        <div class="terminal-title">probe-ai-agent-status.sh</div>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-command">node orchestrator.js --check-state</span></div>
+                        <div class="terminal-line t-response"><span class="t-key">"agent_status"</span>: <span class="t-val-green">"SYNCHRONIZED"</span>,</div>
+                        <div class="terminal-line t-response"><span class="t-key">"transition_check"</span>: <span class="t-val-green">"LEGAL_TRANSITION_OK"</span>,</div>
+                        <div class="terminal-line t-response"><span class="t-key">"citation_validator"</span>: <span class="t-val-blue">"PASSED (100% Grounded)"</span>,</div>
+                        <div class="terminal-line t-response"><span class="t-key">"database_rls"</span>: <span class="t-val-yellow">"SUPABASE_STRICT_ACTIVE"</span></div>
+                        <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-command">git log --oneline -n 2</span></div>
+                        <div class="terminal-line t-response"><span class="t-val-yellow">9a2f1b4</span> fix: Resolve race condition in agent state transition map</div>
+                        <div class="terminal-line t-response"><span class="t-val-yellow">4e12c8a</span> feat: Implement 2-pass deep research synthesis engine</div>
+                        <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cursor">_</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="section-subtitle">기술적 도전과 문제 해결 과정을 기록하며 성장하는 엔지니어입니다</p>
+                </div>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="about-icon"><i data-lucide="bot"></i></div>
+                        <h3>AI 에이전트 & 파이프라인 오케스트레이션</h3>
+                        <p>단순한 API 호출을 넘어, Planner, Researcher, Synthesizer 등 다중 에이전트 간의 자율 워크플로우와 상태 동기화를 설계합니다.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon"><i data-lucide="shield-check"></i></div>
+                        <h3>경쟁 상태(Race Condition) & 데이터 정합성</h3>
+                        <p>비동기 멀티 에이전트 환경에서 발생하는 상태 덮어쓰기 이슈를 유효 상태 전이 맵(Legal Transitions)으로 완벽히 해결합니다.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon"><i data-lucide="lock"></i></div>
+                        <h3>보안 & 사용자 중심 프라이버시</h3>
+                        <p>클라이언트 사이드 전용 No-DB 아키텍처나 Supabase Row Level Security(RLS)를 활용해 데이터 보안과 프라이버시를 지킵니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills-section" id="skills">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Tech Stack</h2>
+                    <p class="section-subtitle">실제 프로젝트를 제작하며 다져온 핵심 기술 역량</p>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Core Backend & AI -->
+                    <div class="skill-category">
+                        <div class="skill-cat-header">
+                            <i data-lucide="cpu"></i>
+                            <h3>Backend & AI Engine</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag main-tag"><i data-lucide="check-circle-2"></i> Next.js (App Router)</span>
+                            <span class="skill-tag main-tag"><i data-lucide="check-circle-2"></i> TypeScript / JavaScript</span>
+                            <span class="skill-tag main-tag"><i data-lucide="check-circle-2"></i> Vercel AI SDK</span>
+                            <span class="skill-tag"><i data-lucide="check-circle-2"></i> Node.js</span>
+                            <span class="skill-tag"><i data-lucide="check-circle-2"></i> Python / Machine Learning</span>
+                            <span class="skill-tag"><i data-lucide="check-circle-2"></i> PHP</span>
+                        </div>
+                    </div>
+
+                    <!-- Database & Cloud Infra -->
+                    <div class="skill-category">
+                        <div class="skill-cat-header">
+                            <i data-lucide="database"></i>
+                            <h3>Database & Infrastructure</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag main-tag"><i data-lucide="check-circle-2"></i> Supabase (PostgreSQL / RLS)</span>
+                            <span class="skill-tag main-tag"><i data-lucide="check-circle-2"></i> OAuth 2.0 (Google Auth)</span>
+                            <span class="skill-tag"><i data-lucide="check-circle-2"></i> Vercel Deployment</span>
+                            <span class="skill-tag"><i data-lucide="check-circle-2"></i> Tavily AI Search API</span>
+                            <span class="skill-tag"><i data-lucide="check-circle-2"></i> REST API Design</span>
+                        </div>
+                    </div>
+
+                    <!-- Frontend & State Management -->
+                    <div class="skill-category">
+                        <div class="skill-cat-header">
+                            <i data-lucide="layers"></i>
+                            <h3>State & Visualization</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag main-tag"><i data-lucide="check-circle-2"></i> Zustand State Engine</span>
+                            <span class="skill-tag main-tag"><i data-lucide="check-circle-2"></i> Tailwind CSS</span>
+                            <span class="skill-tag"><i data-lucide="check-circle-2"></i> Mermaid.js Charting</span>
+                            <span class="skill-tag"><i data-lucide="check-circle-2"></i> @dnd-kit</span>
+                            <span class="skill-tag"><i data-lucide="check-circle-2"></i> LocalStorage / Canvas PDF</span>
+                        </div>
+                    </div>
+
+                    <!-- Engineering Methodology -->
+                    <div class="skill-category">
+                        <div class="skill-cat-header">
+                            <i data-lucide="git-pull-request"></i>
+                            <h3>Engineering Culture</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag main-tag"><i data-lucide="check-circle-2"></i> Agent State Synchronization</span>
+                            <span class="skill-tag main-tag"><i data-lucide="check-circle-2"></i> Hallucination Guardrails</span>
+                            <span class="skill-tag"><i data-lucide="check-circle-2"></i> Git / GitHub Version Control</span>
+                            <span class="skill-tag"><i data-lucide="check-circle-2"></i> Citation Validation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects-section" id="projects">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-subtitle">GitHub 리포지토리 기반 주요 프로젝트</p>
+                </div>
+
+                <!-- Filter Controls -->
+                <div class="filter-container">
+                    <button class="filter-btn active" data-filter="all">전체 프로젝트</button>
+                    <button class="filter-btn" data-filter="ai">AI / Agent</button>
+                    <button class="filter-btn" data-filter="fullstack">Web / System</button>
+                    <button class="filter-btn" data-filter="data">Data Pipeline</button>
+                </div>
+
+                <!-- Project Cards Container -->
+                <div class="projects-grid">
+                    <!-- Project Card 1: ProbeAI (pai) -->
+                    <article class="project-card" data-category="ai fullstack">
+                        <div class="project-card-banner">
+                            <div class="banner-badge">Next.js + AI Agent + Supabase</div>
+                            <div class="architecture-preview">
+                                <i data-lucide="bot"></i>
+                                <span>5-Stage Agent Pipeline</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="tag">Next.js 15</span>
+                                <span class="tag">TypeScript</span>
+                                <span class="tag">Vercel AI SDK</span>
+                                <span class="tag">Supabase</span>
+                                <span class="tag">Tavily API</span>
+                            </div>
+                            <h3 class="project-title">ProbeAI - 자율형 AI 리서치 엔진</h3>
+                            <p class="project-summary">
+                                단순 검색을 넘어 AI 에이전트가 자율적으로 연구 계획을 수립하고 최신 웹 데이터를 수집 및 상호 검증하여 출처가 보장된 심층 보고서를 생성하는 5단계 파이프라인 엔진입니다.
+                            </p>
+                            
+                            <div class="project-highlights">
+                                <div class="highlight-item">
+                                    <i data-lucide="check-circle"></i>
+                                    <span>유효 상태 전이 맵(LEGAL_TRANSITIONS) 도입으로 에이전트 경쟁 상태(Race Condition) 완벽 해결</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i data-lucide="check-circle"></i>
+                                    <span>Citation Validator 및 2-Pass 정보 합성으로 환각(Hallucination) 검증 강화</span>
+                                </div>
+                            </div>
+
+                            <div class="project-footer">
+                                <button class="btn btn-sm btn-outline open-modal-btn" data-project="pai">
+                                    <i data-lucide="layout"></i> 상세 아키텍처 보기
+                                </button>
+                                <a href="https://github.com/leedongyun01/pai" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-icon-text">
+                                    <i data-lucide="github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 2: CareerCraft -->
+                    <article class="project-card" data-category="fullstack">
+                        <div class="project-card-banner banner-purple">
+                            <div class="banner-badge">Next.js + No-DB Security</div>
+                            <div class="architecture-preview">
+                                <i data-lucide="shield-check"></i>
+                                <span>Client-Side Data Privacy</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="tag">Next.js</span>
+                                <span class="tag">Zustand</span>
+                                <span class="tag">@dnd-kit</span>
+                                <span class="tag">jsPDF</span>
+                                <span class="tag">TypeScript</span>
+                            </div>
+                            <h3 class="project-title">CareerCraft - AI 기반 휘발성 포트폴리오 빌더</h3>
+                            <p class="project-summary">
+                                회원가입이나 서버 저장 없이 5분 만에 전문 포트폴리오를 디자인하고 고해상도 PDF 및 이미지로 내보내는 개인정보 보호 중심의 클라이언트 사이드 포트폴리오 플랫폼입니다.
+                            </p>
+
+                            <div class="project-highlights">
+                                <div class="highlight-item">
+                                    <i data-lucide="check-circle"></i>
+                                    <span>No-DB 아키텍처 설계로 민감 정보의 서버 유출 우려를 철저히 차단</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i data-lucide="check-circle"></i>
+                                    <span>@dnd-kit 기반 인터랙티브 WYSIWYG 실시간 레이아웃 편집기 구현</span>
+                                </div>
+                            </div>
+
+                            <div class="project-footer">
+                                <button class="btn btn-sm btn-outline open-modal-btn" data-project="careercraft">
+                                    <i data-lucide="layout"></i> 상세 아키텍처 보기
+                                </button>
+                                <a href="https://github.com/leedongyun01/CareerCraft" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-icon-text">
+                                    <i data-lucide="github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 3: NewsCurationPortal -->
+                    <article class="project-card" data-category="data fullstack">
+                        <div class="project-card-banner banner-blue">
+                            <div class="banner-badge">PHP + Data Aggregation</div>
+                            <div class="architecture-preview">
+                                <i data-lucide="database"></i>
+                                <span>News Pipeline & Portal</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="tag">PHP</span>
+                                <span class="tag">REST API</span>
+                                <span class="tag">MySQL</span>
+                                <span class="tag">Data Curation</span>
+                            </div>
+                            <h3 class="project-title">NewsCurationPortal - 뉴스 수집 & 큐레이션 포털 API</h3>
+                            <p class="project-summary">
+                                실시간 뉴스 데이터 수집 및 카테고리별 정제 파이프라인을 구축하여 사용자 맞춤형 큐레이션 정보를 안정적으로 서빙하는 포털 시스템입니다.
+                            </p>
+
+                            <div class="project-highlights">
+                                <div class="highlight-item">
+                                    <i data-lucide="check-circle"></i>
+                                    <span>뉴스 수집 파이프라인 자동화 및 데이터 중복 검증 로직 적용</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i data-lucide="check-circle"></i>
+                                    <span>안정적인 RESTful API 엔드포인트 설계 및 데이터 쿼리 구조화</span>
+                                </div>
+                            </div>
+
+                            <div class="project-footer">
+                                <button class="btn btn-sm btn-outline open-modal-btn" data-project="newscuration">
+                                    <i data-lucide="layout"></i> 상세 아키텍처 보기
+                                </button>
+                                <a href="https://github.com/leedongyun01/NewsCurationPortal" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-icon-text">
+                                    <i data-lucide="github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Troubleshooting & Tech Notes Section -->
+        <section class="troubleshooting-section" id="troubleshooting">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Troubleshooting & Engineering Notes</h2>
+                    <p class="section-subtitle">실제 프로젝트에서 발생한 원인 분석과 문제 해결의 수식적/논리적 기록</p>
+                </div>
+
+                <div class="notes-grid">
+                    <div class="note-card">
+                        <div class="note-header">
+                            <span class="note-badge danger">Troubleshooting</span>
+                            <span class="note-date">ProbeAI / Race Condition</span>
+                        </div>
+                        <h3>에이전트 간 비동기 상태 동기화 및 덮어쓰기 이슈 해결</h3>
+                        <p class="note-text">
+                            <strong>[문제]</strong> AI 리서치 진행 시 에이전트의 비동기 상태 업데이터가 Supabase 타이밍 차이로 이전 상태를 덮어쓰는 Race Condition 발생.<br>
+                            <strong>[분석]</strong> 상태 변경 시 현재 검증 로직이 빠져 있어 이전 비동기 작업이 완료되면 새 상태가 파괴됨.<br>
+                            <strong>[해결]</strong> `lib/orchestrator.ts`에 유효 상태 전이 맵(`LEGAL_TRANSITIONS`)을 구현하고 상태 갱신 전 엄격 검증 도입으로 100% 정합성 확보.
+                        </p>
+                    </div>
+
+                    <div class="note-card">
+                        <div class="note-header">
+                            <span class="note-badge warning">Validation Guard</span>
+                            <span class="note-date">LLM Hallucination</span>
+                        </div>
+                        <h3>LLM 본문 출처 인용구 오류 및 환각(Hallucination) 검증기 도입</h3>
+                        <p class="note-text">
+                            <strong>[문제]</strong> 합성 단계에서 생성된 보고서에 존재하지 않는 출처 소스 ID가 추가되는 환각 현상 관찰.<br>
+                            <strong>[분석]</strong> 컨텍스트 토큰 누적으로 인한 프롬프트 지시사항 희석.<br>
+                            <strong>[해결]</strong> Post-processing 단계에 `Citation Validator` 후처리기를 배치하여 출처 ID 검증 및 프롬프트에 엄격 가이드라인 강제.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <div class="contact-box glass-card">
+                    <div class="contact-header text-center">
+                        <h2 class="section-title">Let's Connect</h2>
+                        <p class="section-subtitle">안정적이고 가치 있는 백엔드 서비스를 함께 만들어갈 기회를 기다립니다.</p>
+                    </div>
+                    <div class="contact-content">
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <div class="contact-icon"><i data-lucide="mail"></i></div>
+                                <div>
+                                    <span class="contact-label">Email</span>
+                                    <div class="email-copy-wrapper">
+                                        <span class="contact-value" id="email-text">leedongyun01@github.com</span>
+                                        <button class="btn-copy" id="copy-email-btn" title="이메일 주소 복사">
+                                            <i data-lucide="copy"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon"><i data-lucide="github"></i></div>
+                                <div>
+                                    <span class="contact-label">GitHub</span>
+                                    <a href="https://github.com/leedongyun01" target="_blank" rel="noopener noreferrer" class="contact-link">github.com/leedongyun01</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon"><i data-lucide="globe"></i></div>
+                                <div>
+                                    <span class="contact-label">Live Demo</span>
+                                    <a href="https://probeai-mu.vercel.app" target="_blank" rel="noopener noreferrer" class="contact-link">probeai-mu.vercel.app</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>&copy; <span id="year">2026</span> 이동윤 (leedongyun01). All rights reserved.</p>
+            <p class="footer-subtext">Hosted via GitHub Pages (leedongyun01.github.io)</p>
+        </div>
+    </footer>
+
+    <!-- Project Detail Modal Container -->
+    <div class="modal-overlay" id="project-modal">
+        <div class="modal-content glass-card">
+            <button class="modal-close" id="modal-close-btn" aria-label="닫기">
+                <i data-lucide="x"></i>
+            </button>
+            <div id="modal-body">
+                <!-- Dynamically populated via app.js -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i data-lucide="check-circle-2"></i>
+        <span id="toast-message">클립보드에 복사되었습니다.</span>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
